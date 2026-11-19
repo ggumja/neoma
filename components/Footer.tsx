@@ -74,10 +74,10 @@ export default function Footer() {
           </div>
 
           <div className="md:text-right space-y-2 flex flex-col justify-end">
-            <p className="text-[11px] text-slate-500">
+            <p className="text-xs text-slate-500">
               NEOMA · NEXUS B2B Commerce Platform &copy; {new Date().getFullYear()} Neoma Inc. All rights reserved.
             </p>
-            <p className="text-[10px] text-slate-600">
+            <p className="text-xs text-slate-600">
               AWS SQS, SAP, 더존, 영림원, 로젠택배 API 표준 커넥터 연동 호환
             </p>
           </div>

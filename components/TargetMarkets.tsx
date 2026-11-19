@@ -111,7 +111,7 @@ export default function TargetMarkets() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              className="bg-white rounded-2xl p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all group relative flex flex-col justify-between"
+              className="bg-white rounded-2xl p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-blue-300 transition group relative flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-5">
@@ -120,13 +120,13 @@ export default function TargetMarkets() {
                   >
                     <item.icon className={`w-7 h-7 ${item.color}`} />
                   </div>
-                  <span className="text-xs font-bold text-slate-400 font-mono tracking-wider">
+                  <span className="text-xs font-bold text-slate-500 font-mono tracking-wider">
                     TARGET {item.id}
                   </span>
                 </div>
 
                 <div className="inline-block mb-2">
-                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 border border-slate-200">
+                  <span className="text-xs font-bold px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 border border-slate-200">
                     {item.tag}
                   </span>
                 </div>
@@ -139,7 +139,7 @@ export default function TargetMarkets() {
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-400 group-hover:text-blue-600 transition-colors">
+              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-500 group-hover:text-blue-600 transition-colors">
                 <span>자세히 보기</span>
                 <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
               </div>
@@ -167,7 +167,7 @@ export default function TargetMarkets() {
             </div>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold shadow-lg shadow-blue-600/30 transition-all shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold shadow-lg shadow-blue-600/30 transition shrink-0"
             >
               <span>맞춤형 PoC 문의하기</span>
               <ArrowRight className="w-4 h-4" />

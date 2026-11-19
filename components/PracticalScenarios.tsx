@@ -58,7 +58,7 @@ export default function PracticalScenarios() {
                   <Cloud className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
-                  <span className="text-[11px] font-mono font-bold text-emerald-400 uppercase tracking-widest block">
+                  <span className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-widest block">
                     ARCHITECTURE 01
                   </span>
                   <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight">
@@ -80,10 +80,10 @@ export default function PracticalScenarios() {
                 { title: "ERP 자동 등록", subtitle: "SAP/더존 즉시 반영", badge: "Sync" },
               ].map((step, idx) => (
                 <div key={step.title} className="relative group">
-                  <div className="h-full rounded-2xl bg-slate-900/90 border border-slate-700/80 p-4 flex flex-col justify-between group-hover:border-emerald-500/60 transition-all">
+                  <div className="h-full rounded-2xl bg-slate-900/90 border border-slate-700/80 p-4 flex flex-col justify-between group-hover:border-emerald-500/60 transition">
                     <div>
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-[10px] font-mono text-slate-400">STEP 0{idx + 1}</span>
+                        <span className="text-xs font-mono text-slate-400">STEP 0{idx + 1}</span>
                         <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-slate-800 text-emerald-400 border border-emerald-500/20">
                           {step.badge}
                         </span>
@@ -105,7 +105,7 @@ export default function PracticalScenarios() {
 
             {/* Standard Interface Tags */}
             <div className="flex flex-wrap items-center gap-2 pt-2 pb-4">
-              <span className="text-xs text-slate-400 font-medium mr-1">표준 인터페이스 태그:</span>
+              <span className="text-xs text-slate-500 font-medium mr-1">표준 인터페이스 태그:</span>
               <span className="text-xs font-mono px-3 py-1 rounded-lg bg-slate-900 text-blue-300 border border-slate-700">
                 IF-ORDER (주문등록)
               </span>
@@ -139,7 +139,7 @@ export default function PracticalScenarios() {
                   <CreditCard className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-                  <span className="text-[11px] font-mono font-bold text-blue-600 uppercase tracking-widest block">
+                  <span className="text-xs font-mono font-bold text-blue-600 uppercase tracking-widest block">
                     SCENARIO 02
                   </span>
                   <h3 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
@@ -156,13 +156,13 @@ export default function PracticalScenarios() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-3 items-center my-6">
               {/* Total Order */}
               <div className="md:col-span-3 p-4 rounded-2xl bg-slate-50 border border-slate-200 text-center">
-                <span className="text-[11px] font-bold text-slate-500 block">총 주문 금액</span>
+                <span className="text-xs font-bold text-slate-500 block">총 주문 금액</span>
                 <span className="text-lg font-black text-slate-900 mt-1 block">3,000만 원</span>
-                <span className="text-[10px] text-slate-400 mt-0.5 block">단일 발주서 번호</span>
+                <span className="text-xs text-slate-500 mt-0.5 block">단일 발주서 번호</span>
               </div>
 
               {/* Arrow */}
-              <div className="md:col-span-1 flex items-center justify-center text-slate-400">
+              <div className="md:col-span-1 flex items-center justify-center text-slate-500">
                 <ArrowRight className="w-5 h-5 rotate-90 md:rotate-0" />
               </div>
 
@@ -179,17 +179,17 @@ export default function PracticalScenarios() {
               </div>
 
               {/* Arrow */}
-              <div className="md:col-span-1 flex items-center justify-center text-slate-400">
+              <div className="md:col-span-1 flex items-center justify-center text-slate-500">
                 <ArrowRight className="w-5 h-5 rotate-90 md:rotate-0" />
               </div>
 
               {/* Final Confirm */}
               <div className="md:col-span-3 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-center">
-                <span className="text-[11px] font-bold text-emerald-700 block">최종 주문 확정</span>
+                <span className="text-xs font-bold text-emerald-700 block">최종 주문 확정</span>
                 <span className="text-sm font-extrabold text-emerald-800 mt-1 block">
                   자동 확정 및 ERP 즉시 전송
                 </span>
-                <span className="text-[10px] text-emerald-600 mt-0.5 block">전액 결제 완료 시 출고 요청</span>
+                <span className="text-xs text-emerald-600 mt-0.5 block">전액 결제 완료 시 출고 요청</span>
               </div>
             </div>
 
@@ -211,7 +211,7 @@ export default function PracticalScenarios() {
                   <Truck className="w-5 h-5 text-emerald-600" />
                 </div>
                 <div>
-                  <span className="text-[11px] font-mono font-bold text-emerald-600 uppercase tracking-widest block">
+                  <span className="text-xs font-mono font-bold text-emerald-600 uppercase tracking-widest block">
                     SCENARIO 03
                   </span>
                   <h3 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
@@ -235,28 +235,28 @@ export default function PracticalScenarios() {
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-sm">
                   <div className="flex items-center justify-between mb-1">
                     <span className="text-xs font-bold text-emerald-700">1차 출고</span>
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-600 font-bold">즉시 출고</span>
+                    <span className="text-xs px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-600 font-bold">즉시 출고</span>
                   </div>
                   <p className="text-sm font-black text-slate-900">30박스 (송장 30건)</p>
-                  <p className="text-[11px] text-slate-500 mt-1">로젠 송장 실시간 자동 채번</p>
+                  <p className="text-xs text-slate-500 mt-1">로젠 송장 실시간 자동 채번</p>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-sm">
                   <div className="flex items-center justify-between mb-1">
                     <span className="text-xs font-bold text-blue-700">2차 출고</span>
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-50 text-blue-600 font-bold">2주 후 출고</span>
+                    <span className="text-xs px-1.5 py-0.5 rounded bg-blue-50 text-blue-600 font-bold">2주 후 출고</span>
                   </div>
                   <p className="text-sm font-black text-slate-900">40박스 (송장 40건)</p>
-                  <p className="text-[11px] text-slate-500 mt-1">예약 발송 일자 스케줄링</p>
+                  <p className="text-xs text-slate-500 mt-1">예약 발송 일자 스케줄링</p>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-sm">
                   <div className="flex items-center justify-between mb-1">
                     <span className="text-xs font-bold text-indigo-700">3차 출고</span>
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-600 font-bold">4주 후 출고</span>
+                    <span className="text-xs px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-600 font-bold">4주 후 출고</span>
                   </div>
                   <p className="text-sm font-black text-slate-900">30박스 (송장 30건)</p>
-                  <p className="text-[11px] text-slate-500 mt-1">최종 잔여분 출고 완료</p>
+                  <p className="text-xs text-slate-500 mt-1">최종 잔여분 출고 완료</p>
                 </div>
               </div>
             </div>

@@ -77,7 +77,7 @@ export default function ContactForm() {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs text-slate-400 block font-medium">직통 문의 (대표/COO 정재풍)</span>
+                  <span className="text-xs text-slate-500 block font-medium">직통 문의 (대표/COO 정재풍)</span>
                   <a href="tel:010-9018-0310" className="font-bold text-slate-900 hover:text-blue-600 transition-colors">
                     010-9018-0310
                   </a>
@@ -89,7 +89,7 @@ export default function ContactForm() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs text-slate-400 block font-medium">공식 이메일</span>
+                  <span className="text-xs text-slate-500 block font-medium">공식 이메일</span>
                   <a href="mailto:zaipong0417@gmail.com" className="font-bold text-slate-900 hover:text-blue-600 transition-colors">
                     zaipong0417@gmail.com
                   </a>
@@ -101,7 +101,7 @@ export default function ContactForm() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs text-slate-400 block font-medium">본사 소재지</span>
+                  <span className="text-xs text-slate-500 block font-medium">본사 소재지</span>
                   <span className="font-bold text-slate-900">
                     서울특별시 중구 남대문로9길 24 1048호
                   </span>
@@ -155,36 +155,36 @@ export default function ContactForm() {
                   </h3>
 
                   {error && (
-                    <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-xs font-semibold">
+                    <div role="alert" className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm font-semibold">
                       {error}
                     </div>
                   )}
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      <label htmlFor="f-company" className="block text-xs font-bold text-slate-700 mb-1.5">
                         회사명 <span className="text-red-500">*</span>
                       </label>
-                      <input
+                      <input id="f-company" autoComplete="organization"
                         type="text"
                         placeholder="예: (주)네오마"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                         required
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      <label htmlFor="f-name" className="block text-xs font-bold text-slate-700 mb-1.5">
                         담당자명 및 직책 <span className="text-red-500">*</span>
                       </label>
-                      <input
+                      <input id="f-name" autoComplete="name"
                         type="text"
                         placeholder="예: 홍길동 팀장"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                         required
                       />
                     </div>
@@ -192,29 +192,29 @@ export default function ContactForm() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      <label htmlFor="f-phone" className="block text-xs font-bold text-slate-700 mb-1.5">
                         연락처 <span className="text-red-500">*</span>
                       </label>
-                      <input
+                      <input id="f-phone" autoComplete="tel"
                         type="tel"
                         placeholder="예: 010-1234-5678"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                         required
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      <label htmlFor="f-email" className="block text-xs font-bold text-slate-700 mb-1.5">
                         이메일 <span className="text-red-500">*</span>
                       </label>
-                      <input
+                      <input id="f-email" autoComplete="email"
                         type="email"
                         placeholder="예: contact@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                         required
                       />
                     </div>
@@ -222,13 +222,13 @@ export default function ContactForm() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      <label htmlFor="f-erp" className="block text-xs font-bold text-slate-700 mb-1.5">
                         현재 사용 중인 ERP (선택)
                       </label>
-                      <select
+                      <select id="f-erp"
                         value={formData.erp}
                         onChange={(e) => setFormData({ ...formData, erp: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                       >
                         <option value="SAP">SAP</option>
                         <option value="더존 (iCUBE / Smart A)">더존 (iCUBE / Smart A)</option>
@@ -239,13 +239,13 @@ export default function ContactForm() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      <label htmlFor="f-inquiry" className="block text-xs font-bold text-slate-700 mb-1.5">
                         문의 유형
                       </label>
-                      <select
+                      <select id="f-inquiry"
                         value={formData.inquiryType}
                         onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                       >
                         <option value="1:1 라이브 데모 시연">1:1 라이브 데모 시연</option>
                         <option value="ERP 연동 사전 진단">ERP 연동 사전 진단</option>
@@ -255,27 +255,27 @@ export default function ContactForm() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                    <label htmlFor="f-message" className="block text-xs font-bold text-slate-700 mb-1.5">
                       상세 문의 내용 (선택)
                     </label>
-                    <textarea
+                    <textarea id="f-message"
                       rows={3}
                       placeholder="현재 거래 구조의 병목이나 필요한 커스텀 기능, 예상 오픈 일정을 적어주시면 더욱 정밀한 데모가 준비됩니다."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                     />
                   </div>
 
                   <div className="pt-2">
                     <button
                       type="submit"
-                      className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-base shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 transition-all flex items-center justify-center gap-2"
+                      className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-base shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 transition flex items-center justify-center gap-2"
                     >
                       <span>라이브 데모 & PoC 신청 완료하기</span>
                       <Send className="w-4 h-4" />
                     </button>
-                    <p className="text-[11px] text-slate-400 text-center mt-2">
+                    <p className="text-xs text-slate-500 text-center mt-2">
                       입력하신 정보는 상담 및 데모 일정 조율 목적으로만 안전하게 보관됩니다.
                     </p>
                   </div>

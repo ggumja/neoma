@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition duration-300 ${
         isScrolled
           ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-200/80 py-3.5"
           : "bg-transparent py-5"
@@ -47,7 +47,7 @@ export default function Navbar() {
                   NEXUS B2B
                 </span>
               </div>
-              <span className="text-[10px] text-slate-500 font-medium tracking-wide">
+              <span className="text-xs text-slate-500 font-medium tracking-wide">
                 Enterprise Commerce Solution
               </span>
             </div>
@@ -59,7 +59,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 hover:after:w-full after:transition-all"
+                className="text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 hover:after:w-full after:transition-[width]"
               >
                 {link.name}
               </a>
@@ -70,7 +70,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold shadow-md shadow-blue-600/25 hover:shadow-lg hover:shadow-blue-600/35 transition-all transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold shadow-md shadow-blue-600/25 hover:shadow-lg hover:shadow-blue-600/35 transition transform hover:-translate-y-0.5"
             >
               <span>라이브 데모 & PoC 신청</span>
               <ArrowRight className="w-4 h-4" />

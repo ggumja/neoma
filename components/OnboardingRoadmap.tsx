@@ -162,11 +162,11 @@ export default function OnboardingRoadmap() {
               {roadmapSteps.map((step, idx) => (
                 <div
                   key={step.period}
-                  className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition-all flex flex-col justify-between"
+                  className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition flex flex-col justify-between"
                 >
                   <div>
                     <span
-                      className={`inline-block px-2.5 py-1 rounded-md text-[11px] font-extrabold text-white mb-3 ${step.badgeBg}`}
+                      className={`inline-block px-2.5 py-1 rounded-md text-xs font-extrabold text-white mb-3 ${step.badgeBg}`}
                     >
                       {step.period}
                     </span>
@@ -198,7 +198,7 @@ export default function OnboardingRoadmap() {
               {onboardingSteps.map((item) => (
                 <div
                   key={item.step}
-                  className="p-5 rounded-2xl bg-slate-50/70 border border-slate-200 hover:bg-white hover:border-blue-300 hover:shadow-md transition-all flex flex-col justify-between"
+                  className="p-5 rounded-2xl bg-slate-50/70 border border-slate-200 hover:bg-white hover:border-blue-300 hover:shadow-md transition flex flex-col justify-between"
                 >
                   <div>
                     <span className="text-xs font-mono font-black text-blue-600 block mb-2">

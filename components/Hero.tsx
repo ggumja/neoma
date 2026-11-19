@@ -95,7 +95,7 @@ export default function Hero() {
             {/* Core 4 Feature Cards (Manage. Integrate. Grow.) */}
             <div className="pt-2">
               <div className="flex items-center gap-2 mb-3.5">
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
                   Manage. Integrate. Grow.
                 </span>
                 <div className="h-px bg-slate-200 flex-1" />
@@ -108,7 +108,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.1 * idx }}
-                    className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md hover:border-blue-300 transition-all group flex items-start gap-3"
+                    className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md hover:border-blue-300 transition group flex items-start gap-3"
                   >
                     <div
                       className={`w-10 h-10 rounded-xl ${item.bgColor} ${item.borderColor} border flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform`}
@@ -132,17 +132,17 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-base shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 transition-all transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-base shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 transition transform hover:-translate-y-0.5"
               >
                 <span>라이브 데모 & PoC 신청</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="#results"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-900 font-bold text-base border border-slate-300/80 shadow-sm transition-all"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-900 font-bold text-base border border-slate-300/80 shadow-sm transition"
               >
                 <span>도입 효과 살펴보기</span>
-                <ChevronRight className="w-4 h-4 text-slate-400" />
+                <ChevronRight className="w-4 h-4 text-slate-500" />
               </a>
             </div>
           </motion.div>
@@ -170,11 +170,11 @@ export default function Hero() {
                     fill
                     priority
                     sizes="(max-width: 768px) 100vw, 500px"
-                    className="object-cover object-center transform hover:scale-102 transition-transform duration-700"
+                    className="object-cover object-center transform hover:scale-[1.02] transition-transform duration-700"
                   />
 
                   {/* Corner Accent Overlay */}
-                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-[11px] font-semibold text-emerald-400 flex items-center gap-1.5 shadow-lg">
+                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-xs font-semibold text-emerald-400 flex items-center gap-1.5 shadow-lg">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                     LIVE READY
                   </div>

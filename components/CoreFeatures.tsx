@@ -133,7 +133,7 @@ export default function CoreFeatures() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              className="rounded-2xl p-7 bg-[#F8FAFC] border border-slate-200/90 hover:bg-white hover:border-blue-300 hover:shadow-xl transition-all group flex flex-col justify-between"
+              className="rounded-2xl p-7 bg-[#F8FAFC] border border-slate-200/90 hover:bg-white hover:border-blue-300 hover:shadow-xl transition group flex flex-col justify-between"
             >
               <div>
                 {/* Card Top */}
@@ -145,7 +145,7 @@ export default function CoreFeatures() {
                       <feat.icon className={`w-6 h-6 ${feat.color}`} />
                     </div>
                     <div>
-                      <span className="text-xs font-mono font-bold text-slate-400 block">
+                      <span className="text-xs font-mono font-bold text-slate-500 block">
                         MODULE {feat.num}
                       </span>
                       <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
@@ -168,7 +168,7 @@ export default function CoreFeatures() {
 
               {/* Bottom Feature Tag */}
               <div className="pt-4 border-t border-slate-200/60 flex items-center justify-between">
-                <span className="text-[11px] font-bold px-2.5 py-1 rounded-md bg-white border border-slate-200 text-slate-700 shadow-2xl">
+                <span className="text-xs font-bold px-2.5 py-1 rounded-md bg-white border border-slate-200 text-slate-700 shadow-2xl">
                   {feat.highlight}
                 </span>
                 <span className="text-xs text-blue-600 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">

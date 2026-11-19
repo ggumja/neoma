@@ -7,9 +7,11 @@ import ProvenResults from "@/components/ProvenResults";
 import OnboardingRoadmap from "@/components/OnboardingRoadmap";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import MotionProvider from "@/components/MotionProvider";
 
 export default function Home() {
   return (
+    <MotionProvider>
     <main className="min-h-screen flex flex-col bg-[#F8FAFC]">
       {/* Sticky Top Navigation */}
       <Navbar />
@@ -38,5 +40,6 @@ export default function Home() {
       {/* Footer */}
       <Footer />
     </main>
+    </MotionProvider>
   );
 }
