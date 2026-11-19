@@ -20,7 +20,7 @@ const config: Config = {
         textMuted: "#94A3B8",
       },
       fontFamily: {
-        sans: ["Pretendard", "-apple-system", "BlinkMacSystemFont", "system-ui", "Roboto", "sans-serif"],
+        sans: ["Pretendard Variable", "Pretendard", "-apple-system", "BlinkMacSystemFont", "system-ui", "Roboto", "sans-serif"],
       },
     },
   },

@@ -165,7 +165,7 @@ export default function Hero() {
 
                   {/* High Quality Cube Graphic */}
                   <Image
-                    src="/slides/hero-cube.jpg"
+                    src="/slides/hero-cube.webp"
                     alt="NEXUS B2B Enterprise Solutions 3D Matrix"
                     fill
                     priority

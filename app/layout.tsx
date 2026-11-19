@@ -53,6 +53,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className="scroll-smooth">
+      <head>
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/fonts/pretendard/pretendardvariable-dynamic-subset.css" />
+      </head>
       <body className="min-h-screen bg-[#F8FAFC] text-[#0F172A] antialiased selection:bg-blue-600 selection:text-white">
         {children}
       </body>
