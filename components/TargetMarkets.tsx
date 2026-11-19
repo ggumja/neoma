@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import {
   Cog,
   Store,
@@ -84,18 +83,12 @@ export default function TargetMarkets() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wide">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-            01. 적용 가능 타겟 시장
-          </div>
+        <div className="max-w-3xl mb-16 space-y-3">
 
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A]">
             다양한 B2B 산업을 아우르는{" "}
-            <span className="text-blue-600">6대 핵심 적용 분야</span>
+            <span className="text-slate-500">6대 핵심 적용 분야</span>
           </h2>
-
-          <div className="w-12 h-1 bg-emerald-500 mx-auto rounded-full mt-2" />
 
           <p className="text-slate-600 text-sm sm:text-base font-normal pt-2">
             업종별로 서로 다른 거래 관행과 결제·물류 규칙을 유연하게 수용하는 맞춤형 아키텍처를 제공합니다.
@@ -105,12 +98,8 @@ export default function TargetMarkets() {
         {/* 3x2 Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {industries.map((item, index) => (
-            <motion.div
+            <div
               key={item.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.08 }}
               className="bg-white rounded-2xl p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-blue-300 transition group relative flex flex-col justify-between"
             >
               <div>
@@ -143,15 +132,12 @@ export default function TargetMarkets() {
                 <span>자세히 보기</span>
                 <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Bottom Banner (Dark Navy) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
           className="mt-12 rounded-2xl bg-[#0F172A] p-6 sm:p-8 text-center text-white shadow-xl relative overflow-hidden border border-slate-800"
         >
           <div className="absolute inset-0 bg-dot-pattern-dark opacity-30 pointer-events-none" />
@@ -173,7 +159,7 @@ export default function TargetMarkets() {
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

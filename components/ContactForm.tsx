@@ -57,14 +57,10 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Introduction & Direct Contact Info */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wide">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-              신청 및 문의
-            </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A] leading-tight">
               차세대 B2B 커머스로의 전환, <br />
-              <span className="text-blue-600">지금 바로 상담받으세요</span>
+              <span className="text-slate-500">지금 바로 상담받으세요</span>
             </h2>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import {
   Calendar,
   CheckCircle2,
@@ -69,18 +68,12 @@ export default function OnboardingRoadmap() {
     <section id="roadmap" className="py-24 bg-[#F8FAFC] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wide">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-            05. 단독 인프라 구축 & 도입 안내
-          </div>
+        <div className="max-w-3xl mb-16 space-y-3">
 
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A]">
             엔터프라이즈 단독 구축과{" "}
-            <span className="text-blue-600">신속한 도입 로드맵</span>
+            <span className="text-slate-500">신속한 도입 로드맵</span>
           </h2>
-
-          <div className="w-12 h-1 bg-emerald-500 mx-auto rounded-full mt-2" />
 
           <p className="text-slate-600 text-sm sm:text-base font-normal pt-2">
             보안 감사와 데이터 주권을 보장하는 전용 클라우드 환경에서 8주 이내 초고속 구축을 실현합니다.
@@ -89,10 +82,7 @@ export default function OnboardingRoadmap() {
 
         <div className="space-y-8 max-w-5xl mx-auto">
           {/* Block 1: Enterprise Dedicated (AWS VPC 단독 구축) — Dark Navy Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="rounded-3xl bg-[#0B1120] border border-slate-800 p-7 sm:p-9 text-white shadow-2xl relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -110,7 +100,7 @@ export default function OnboardingRoadmap() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
+              <div className="border-t border-slate-700 pt-4">
                 <div className="flex items-center gap-2 mb-2 text-emerald-400">
                   <Server className="w-4 h-4" />
                   <span className="text-xs font-bold">완전 격리 인프라</span>
@@ -120,7 +110,7 @@ export default function OnboardingRoadmap() {
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
+              <div className="border-t border-slate-700 pt-4">
                 <div className="flex items-center gap-2 mb-2 text-blue-400">
                   <Layers className="w-4 h-4" />
                   <span className="text-xs font-bold">1:1 맞춤 커넥터</span>
@@ -130,7 +120,7 @@ export default function OnboardingRoadmap() {
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
+              <div className="border-t border-slate-700 pt-4">
                 <div className="flex items-center gap-2 mb-2 text-teal-400">
                   <Key className="w-4 h-4" />
                   <span className="text-xs font-bold">영구 라이선스</span>
@@ -140,14 +130,11 @@ export default function OnboardingRoadmap() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Block 2: 평균 6~8주 4단계 신속 구축 로드맵 (White Card) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="rounded-3xl bg-white border border-slate-200/90 p-7 sm:p-9 shadow-lg"
+          <div
+            className="border-t border-slate-200 pt-9"
           >
             <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
               <div className="w-9 h-9 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
@@ -176,14 +163,11 @@ export default function OnboardingRoadmap() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Block 3: 3단계 도입 프로세스 (White Card) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="rounded-3xl bg-white border border-slate-200/90 p-7 sm:p-9 shadow-lg"
+          <div
+            className="border-t border-slate-200 pt-9"
           >
             <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
               <div className="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600">
@@ -210,7 +194,7 @@ export default function OnboardingRoadmap() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion, useInView } from "framer-motion";
 import {
   Clock,
   ShieldCheck,
@@ -14,8 +13,6 @@ import {
 } from "lucide-react";
 
 export default function ProvenResults() {
-  const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const kpis = [
     {
@@ -71,21 +68,15 @@ export default function ProvenResults() {
   ];
 
   return (
-    <section id="results" ref={ref} className="py-24 bg-white relative overflow-hidden">
+    <section id="results" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wide">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-            04. 도입 효과 및 기대 성과
-          </div>
+        <div className="max-w-3xl mb-16 space-y-3">
 
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A]">
             숫자로 검증된{" "}
-            <span className="text-blue-600">B2B 디지털 전환 도입효과</span>
+            <span className="text-slate-500">B2B 디지털 전환 도입효과</span>
           </h2>
-
-          <div className="w-12 h-1 bg-emerald-500 mx-auto rounded-full mt-2" />
 
           <p className="text-slate-600 text-sm sm:text-base font-normal pt-2">
             단순한 쇼핑몰 구축을 넘어, 영업과 재경, 물류 부서의 수기 업무 비용을 혁신적으로 제거합니다.
@@ -95,11 +86,8 @@ export default function ProvenResults() {
         {/* 4 Quantitative KPI Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {kpis.map((kpi, idx) => (
-            <motion.div
+            <div
               key={kpi.label}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-blue-300 transition flex flex-col justify-between"
             >
               <div>
@@ -120,15 +108,12 @@ export default function ProvenResults() {
               <div className="pt-3 border-t border-slate-200/80 mt-3">
                 <p className="text-xs text-slate-500 font-medium leading-relaxed">{kpi.sub}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Bottom Organizational Innovation Effect (Dark Navy Panel) */}
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <div
           className="rounded-3xl bg-[#0B1120] border border-slate-800 p-8 sm:p-10 text-white shadow-2xl relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -144,7 +129,7 @@ export default function ProvenResults() {
             {innovations.map((item, i) => (
               <div
                 key={item.title}
-                className="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-emerald-500/50 transition flex flex-col justify-between"
+                className="border-t border-slate-700 pt-5 hover:border-emerald-500/50 transition flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
@@ -158,7 +143,7 @@ export default function ProvenResults() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

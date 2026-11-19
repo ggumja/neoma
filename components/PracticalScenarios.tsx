@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import {
   Cloud,
   CreditCard,
@@ -22,18 +21,12 @@ export default function PracticalScenarios() {
     <section id="scenarios" className="py-24 bg-[#F8FAFC] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wide">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-            03. 핵심 실무 시나리오 & 아키텍처
-          </div>
+        <div className="max-w-3xl mb-16 space-y-3">
 
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A]">
             현장 중심 B2B 실무 시나리오와 <br className="hidden sm:inline" />
-            <span className="text-blue-600">무중단 연동 아키텍처</span>
+            <span className="text-slate-500">무중단 연동 아키텍처</span>
           </h2>
-
-          <div className="w-12 h-1 bg-emerald-500 mx-auto rounded-full mt-2" />
 
           <p className="text-slate-600 text-sm sm:text-base font-normal pt-2">
             실제 기업간 거래에서 발생하는 ERP 점검, 고액 결제 한도 분할, 일정별 분할 출고 문제를 완벽하게 해결합니다.
@@ -43,10 +36,7 @@ export default function PracticalScenarios() {
         {/* 3 Visual Flow Blocks Stack */}
         <div className="space-y-8 max-w-5xl mx-auto">
           {/* Block 1: AWS SQS 무중단 ERP 연동 파이프라인 (Dark Navy 강조 패널) */}
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="rounded-3xl bg-[#0B1120] border border-slate-800 p-7 sm:p-9 shadow-2xl relative overflow-hidden"
           >
             {/* Top Glow & Badge */}
@@ -80,7 +70,7 @@ export default function PracticalScenarios() {
                 { title: "ERP 자동 등록", subtitle: "SAP/더존 즉시 반영", badge: "Sync" },
               ].map((step, idx) => (
                 <div key={step.title} className="relative group">
-                  <div className="h-full rounded-2xl bg-slate-900/90 border border-slate-700/80 p-4 flex flex-col justify-between group-hover:border-emerald-500/60 transition">
+                  <div className="h-full border-t border-slate-700 pt-4 flex flex-col justify-between group-hover:border-emerald-500/60 transition">
                     <div>
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-xs font-mono text-slate-400">STEP 0{idx + 1}</span>
@@ -124,14 +114,11 @@ export default function PracticalScenarios() {
                 <strong>ERP 점검 중에도 주문 무손실 수용</strong>: 사내 ERP 정기 점검 또는 네트워크 일시 장애가 발생해도 SQS 큐에 안전 보관되며, 10분 주기 Sweeper 엔진이 정상화 즉시 자동 반영합니다.
               </span>
             </div>
-          </motion.div>
+          </div>
 
           {/* Block 2: 고액 주문 법인카드 분할결제 시나리오 (White Card) */}
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="rounded-3xl bg-white border border-slate-200/90 p-7 sm:p-9 shadow-lg relative overflow-hidden"
+          <div
+            className="border-t border-slate-200 pt-9 relative"
           >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-5 border-b border-slate-100">
               <div className="flex items-center gap-3">
@@ -196,14 +183,11 @@ export default function PracticalScenarios() {
             <p className="text-xs text-slate-500 font-normal leading-relaxed mt-4">
               고액 결제가 잦은 B2B 거래 특성상, 법인카드의 1회 한도나 일일 한도 초과 문제를 해결하기 위해 여러 장의 카드로 원하는 금액만큼 나누어 결제할 수 있으며 잔여 금액 완납 시 하나의 주문 데이터로 ERP에 실시간 전송됩니다.
             </p>
-          </motion.div>
+          </div>
 
           {/* Block 3: 1주문 다회차 분할배송 & 로젠 송장 자동화 (White Card) */}
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="rounded-3xl bg-white border border-slate-200/90 p-7 sm:p-9 shadow-lg relative overflow-hidden"
+          <div
+            className="border-t border-slate-200 pt-9 relative"
           >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-5 border-b border-slate-100">
               <div className="flex items-center gap-3">
@@ -225,7 +209,7 @@ export default function PracticalScenarios() {
             </div>
 
             {/* Split Delivery Flow */}
-            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 my-4 space-y-4">
+            <div className="my-4 space-y-4">
               <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-3">
                 <span className="text-sm font-bold text-slate-800">100박스 대량 발주</span>
                 <span className="text-xs text-slate-500">회차별 희망 배송 일정 지정 출고</span>
@@ -268,7 +252,7 @@ export default function PracticalScenarios() {
                 <strong>1박스 = 1송장 단위 개별 추적</strong>: 로젠택배 API와 직접 연동되어 N박스 대량 출고 시에도 원클릭으로 로젠 송장을 자동 채번 및 일괄 출력하고, 배송 현황이 고객사 주문 상세에 실시간 동기화됩니다.
               </span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

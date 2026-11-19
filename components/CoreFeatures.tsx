@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import {
   CreditCard,
   Database,
@@ -106,18 +105,12 @@ export default function CoreFeatures() {
     <section id="features" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wide">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-            02. 핵심 기능셋 요약
-          </div>
+        <div className="max-w-3xl mb-16 space-y-3">
 
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A]">
             기업간 거래를 완성하는{" "}
-            <span className="text-blue-600">6대 핵심 기능 아키텍처</span>
+            <span className="text-slate-500">6대 핵심 기능 아키텍처</span>
           </h2>
-
-          <div className="w-12 h-1 bg-emerald-500 mx-auto rounded-full mt-2" />
 
           <p className="text-slate-600 text-sm sm:text-base font-normal pt-2">
             기존 B2C 쇼핑몰 솔루션으로는 불가능했던 B2B 현장의 특수 거래 조건들을 표준 엔진으로 완벽히 구현했습니다.
@@ -127,12 +120,8 @@ export default function CoreFeatures() {
         {/* 3x2 Feature Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feat, index) => (
-            <motion.div
+            <div
               key={feat.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.08 }}
               className="rounded-2xl p-7 bg-[#F8FAFC] border border-slate-200/90 hover:bg-white hover:border-blue-300 hover:shadow-xl transition group flex flex-col justify-between"
             >
               <div>
@@ -176,15 +165,12 @@ export default function CoreFeatures() {
                   <ArrowRight className="w-3.5 h-3.5" />
                 </span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Bottom Headline Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
           className="mt-12 rounded-2xl bg-[#0F172A] py-6 px-8 text-center text-white shadow-xl border border-slate-800"
         >
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -193,7 +179,7 @@ export default function CoreFeatures() {
               주문부터 결제 · ERP · 물류까지 하나의 플랫폼으로 통합
             </h4>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
