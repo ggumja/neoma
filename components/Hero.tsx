@@ -8,7 +8,6 @@ import {
   CreditCard,
   RefreshCw,
   Truck,
-  Sparkles,
   ChevronRight,
   CheckCircle2,
   Building2,
@@ -68,22 +67,11 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 space-y-7"
           >
-            {/* Top Badges */}
-            <div className="flex flex-wrap items-center gap-2.5">
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-[#0F172A] text-white shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-                ENTERPRISE B2B SOLUTION
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200/80">
-                Built for Enterprise. Designed for B2B.
-              </span>
-            </div>
-
             {/* Main Headline */}
             <div className="space-y-2">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-black tracking-tight leading-[1.18] text-[#0F172A]">
                 복잡한 기업간 거래 관행을 <br />
-                <span className="text-[#2563EB] bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                <span className="text-[#2563EB]">
                   완벽한 디지털로 통합
                 </span>
               </h1>
@@ -94,13 +82,6 @@ export default function Hero() {
 
             {/* Core 4 Feature Cards (Manage. Integrate. Grow.) */}
             <div className="pt-2">
-              <div className="flex items-center gap-2 mb-3.5">
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                  Manage. Integrate. Grow.
-                </span>
-                <div className="h-px bg-slate-200 flex-1" />
-              </div>
-
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 {coreFeatures.map((item, idx) => (
                   <motion.div
@@ -134,7 +115,7 @@ export default function Hero() {
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-base shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 transition transform hover:-translate-y-0.5"
               >
-                <span>라이브 데모 & PoC 신청</span>
+                <span>라이브 데모 신청하기</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
@@ -172,42 +153,8 @@ export default function Hero() {
                     sizes="(max-width: 768px) 100vw, 500px"
                     className="object-cover object-center transform hover:scale-[1.02] transition-transform duration-700"
                   />
-
-                  {/* Corner Accent Overlay */}
-                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-xs font-semibold text-emerald-400 flex items-center gap-1.5 shadow-lg">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    LIVE READY
-                  </div>
                 </div>
               </div>
-
-              {/* Bottom Dark Navy Conversion Banner */}
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="mt-4 rounded-2xl bg-[#0F172A] p-5 text-white border border-slate-800 shadow-xl relative overflow-hidden"
-              >
-                <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-blue-600/20 rounded-full blur-xl" />
-                <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <div>
-                    <h2 className="text-sm font-bold text-white flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-blue-400" />
-                      아직도 전화와 엑셀로 거래하시나요?
-                    </h2>
-                    <p className="text-xs text-slate-400 mt-1">
-                      이제 NEXUS B2B와 함께 기업간 거래를 자동화하세요.
-                    </p>
-                  </div>
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-xs font-bold text-white transition-colors shrink-0 self-start sm:self-auto"
-                  >
-                    <span>라이브 데모 & PoC</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-              </motion.div>
             </div>
           </motion.div>
         </div>

@@ -72,7 +72,7 @@ export default function Navbar() {
               href="#contact"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold shadow-md shadow-blue-600/25 hover:shadow-lg hover:shadow-blue-600/35 transition transform hover:-translate-y-0.5"
             >
-              <span>라이브 데모 & PoC 신청</span>
+              <span>라이브 데모 신청하기</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -109,7 +109,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-600 text-white font-bold text-sm shadow-md"
             >
-              <span>라이브 데모 & PoC 신청</span>
+              <span>라이브 데모 신청하기</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>

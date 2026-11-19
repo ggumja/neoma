@@ -272,7 +272,7 @@ export default function ContactForm() {
                       type="submit"
                       className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-base shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 transition flex items-center justify-center gap-2"
                     >
-                      <span>라이브 데모 & PoC 신청 완료하기</span>
+                      <span>라이브 데모 신청하기</span>
                       <Send className="w-4 h-4" />
                     </button>
                     <p className="text-xs text-slate-500 text-center mt-2">
